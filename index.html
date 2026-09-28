@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickSurvey — Encuesta interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="survey-card">
+    <header class="survey-header">
+      <h1 id="survey-title">QuickSurvey — Encuesta interactiva</h1>
+      <div class="progress-container">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+        <span id="progress-text">Pregunta 1 de 3</span>
+      </div>
+    </header>
+
+    <!-- Contenedor dinamico de preguntas -->
+    <section id="question-container" class="question-container">
+      <!-- Se genera dinamicamente desde JavaScript -->
+    </section>
+
+    <!-- Mensaje de validacion -->
+    <div id="validation-message" class="validation-message hidden" role="alert"></div>
+
+    <!-- Navegacion -->
+    <footer class="survey-footer">
+      <button id="btn-prev" class="btn btn-secondary">Anterior</button>
+      <button id="btn-next" class="btn btn-primary">Siguiente</button>
+      <button id="btn-finish" class="btn btn-success hidden">Finalizar</button>
+    </footer>
+
+    <!-- Area de Resumen y Estadisticas -->
+    <section id="summary-container" class="summary-container hidden">
+      <h2>Resumen de Respuestas</h2>
+      <div id="summary-content"></div>
+      <button id="btn-restart" class="btn btn-danger">Reiniciar encuesta</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
